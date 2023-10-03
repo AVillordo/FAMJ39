@@ -5,10 +5,6 @@
  */
 package famj39.AccesoDatos;
 
-/**
- *
- * @author Conectar
- */
 public class ProductosDatas {
     
 }
