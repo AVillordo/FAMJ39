@@ -5,40 +5,35 @@
  */
 package famj39.Entidades;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
-/**
- *
- * @author Conectar
- */
+
 public class Reservas {
-     private int idReserva;
+    private int idReserva;
     private String nombreClientes;
     private int dniCliente;
-    private Date  fechaReserva;
+    private LocalDateTime fechaReserva;
     private Mesas mesa;
-    private int hora;
     private boolean estado;
 
     public Reservas() {
     }
 
-    public Reservas(String nombreClientes, int dniCliente, Date fechaReserva, Mesas mesa, int hora, boolean estado) {
+    public Reservas(String nombreClientes, int dniCliente, LocalDateTime fechaReserva, Mesas mesa, boolean estado) {
         this.nombreClientes = nombreClientes;
         this.dniCliente = dniCliente;
         this.fechaReserva = fechaReserva;
         this.mesa = mesa;
-        this.hora = hora;
         this.estado = estado;
     }
 
-    public Reservas(int idReserva, String nombreClientes, int dniCliente, Date fechaReserva, Mesas mesa, int hora, boolean estado) {
+    public Reservas(int idReserva, String nombreClientes, int dniCliente, LocalDateTime fechaReserva, Mesas mesa, boolean estado) {
         this.idReserva = idReserva;
         this.nombreClientes = nombreClientes;
         this.dniCliente = dniCliente;
         this.fechaReserva = fechaReserva;
         this.mesa = mesa;
-        this.hora = hora;
+       
         this.estado = estado;
     }
 
@@ -66,11 +61,11 @@ public class Reservas {
         this.dniCliente = dniCliente;
     }
 
-    public Date getFechaReserva() {
+    public LocalDateTime getFechaReserva() {
         return fechaReserva;
     }
 
-    public void setFechaReserva(Date fechaReserva) {
+    public void setFechaReserva(LocalDateTime fechaReserva) {
         this.fechaReserva = fechaReserva;
     }
 
@@ -80,14 +75,6 @@ public class Reservas {
 
     public void setMesa(Mesas mesa) {
         this.mesa = mesa;
-    }
-
-    public int getHora() {
-        return hora;
-    }
-
-    public void setHora(int hora) {
-        this.hora = hora;
     }
 
     public boolean isEstado() {
@@ -100,7 +87,7 @@ public class Reservas {
 
     @Override
     public String toString() {
-        return "Reservas{" + "idReserva=" + idReserva + ", nombreClientes=" + nombreClientes + ", dniCliente=" + dniCliente + ", fechaReserva=" + fechaReserva + ", mesa=" + mesa + ", hora=" + hora + ", estado=" + estado + '}';
+        return "Reservas" + "idReserva=" + idReserva + ", nombreClientes=" + nombreClientes + ", dniCliente=" + dniCliente + ", fechaReserva=" + fechaReserva + ", mesa=" + mesa +  "estado=" + estado;
     }
     
     
